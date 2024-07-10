@@ -18,7 +18,8 @@ from homeassistant.helpers.dispatcher import (
 )
 from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers.restore_state import RestoreEntity
-from homeassistant.helpers.typing import HomeAssistantType
+from homeassistant.core import HomeAssistant
+#from homeassistant.helpers.typing import HomeAssistantType
 from homeassistant.util import slugify
 
 from .common import ZoomAPI, ZoomUserProfileDataUpdateCoordinator, get_contact_name
@@ -43,7 +44,8 @@ PARALLEL_UPDATES = 5
 
 
 async def async_setup_entry(
-    hass: HomeAssistantType, config_entry: ConfigEntry, async_add_entities
+    #hass: HomeAssistantType, config_entry: ConfigEntry, async_add_entities
+    hass: HomeAssistant, config_entry: ConfigEntry, async_add_entities
 ) -> None:
     """Set up a Zoom presence sensor entry."""
     # Set default options
@@ -120,7 +122,8 @@ class ZoomBaseBinarySensor(RestoreEntity, BinarySensorEntity):
 
     @staticmethod
     async def _async_send_update_options_signal(
-        hass: HomeAssistantType, config_entry: ConfigEntry
+        #hass: HomeAssistantType, config_entry: ConfigEntry
+        hass: HomeAssistant, config_entry: ConfigEntry
     ) -> None:
         """Send update event when Zoom config entry is updated."""
         async_dispatcher_send(hass, config_entry.entry_id)
@@ -306,7 +309,8 @@ class ZoomContactUserBinarySensor(ZoomBaseBinarySensor):
     """Class for Zoom user profile binary sensor for contacts of authenticated user."""
 
     def __init__(
-        self, hass: HomeAssistantType, config_entry: ConfigEntry, id: str
+        #self, hass: HomeAssistantType, config_entry: ConfigEntry, id: str
+        self, hass: HomeAssistant, config_entry: ConfigEntry, id: str
     ) -> None:
         """Initialize entity."""
         super().__init__(hass, config_entry)
