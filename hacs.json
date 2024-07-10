@@ -1,6 +1,6 @@
 {
     "name": "Zoom2",
-    "render_readme": false,
+    "render_readme": true,
     "homeassistant": "2021.5.0b0",
     "zip_release": false
 }
