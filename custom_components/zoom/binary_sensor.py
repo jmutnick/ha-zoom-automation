@@ -71,7 +71,7 @@ def get_data_from_path(data: Dict[str, Any], path: List[str]) -> Optional[str]:
 class ZoomBaseBinarySensor(RestoreEntity, BinarySensorEntity):
     """Base class for Zoom binary_sensor."""
 
-    def __init__(self, hass: HomeAssistantType, config_entry: ConfigEntry) -> None:
+    def __init__(self, hass: HomeAssistant, config_entry: ConfigEntry) -> None:
         """Initialize base sensor."""
         self._config_entry = config_entry
         self._hass = hass
