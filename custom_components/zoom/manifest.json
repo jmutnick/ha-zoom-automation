@@ -1,11 +1,11 @@
 {
     "domain": "zoom",
-    "name": "Zoom2",
+    "name": "Zoom",
     "codeowners": ["@jmutnick"],
     "config_flow": true,
     "dependencies": ["http", "auth"],
     "documentation": "https://github.com/jmutnick/ha-zoom-automation",
     "iot_class": "cloud_push",
     "issue_tracker": "https://github.com/jmutnick/ha-zoom-automation/issues",
-    "version": "v0.0.1"
+    "version": "v0.0.0"
 }
