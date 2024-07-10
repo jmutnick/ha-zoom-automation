@@ -1,6 +1,6 @@
 {
     "domain": "zoom",
-    "name": "Zoom",
+    "name": "Zoom2",
     "codeowners": ["@jmutnick"],
     "config_flow": true,
     "dependencies": ["http", "auth"],
