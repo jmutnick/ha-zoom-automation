@@ -1,6 +1,4 @@
 # New fork by jmutnick
-I switched jobs in 2021 and no longer use Zoom so I am unable to continue developing this integration further. I would be happy to transfer ownership or add contributers, and in lieu of that I will review PRs and accept contributions. Please open an issue if you would like to take a more active role in this integration.
-
 
 [![Last Commit][last-commit-shield]][commits]
 [![GitHub Activity][commits-shield]][commits]
