@@ -145,7 +145,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
 
     for platform in PLATFORMS:
         hass.async_create_task(
-            hass.config_entries.async_forward_entry_setup(entry, platform)
+            hass.config_entries.async_forward_entry_setups(entry, platform)  #changed setup to setups
         )
 
     return True
